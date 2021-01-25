@@ -7,7 +7,12 @@
 body{
     background-color: blue;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
     color:black;
+}
+h1{
+    font-size: 250%;
+    margin: 20px 0;
 }
 a{
     color: inherit;
@@ -25,27 +30,29 @@ a{
     /*Upper header */
 header .contain_upper_header {
     background-color: #F4F9FD;
-    border-bottom: 5px solid black;
+    border-bottom: 1px solid black;
     /* border: dotted black 3px; */
+}
+.btn_orange {
+    background-color: #FE775A;
+    color: white;
+    border-radius:3px;
 }
 header .upper_header {
     font-size: 90%;
     height: 60px;
-
-    border: solid 3px greenyellow;
+    /* border: solid 3px greenyellow; */
 }
 header .upper_header .left_minor_nav{
     float: left;
-    transform: translateY(50%);
-
-    border: 2px solid red;
+    transform: translateY(110%);
+    /* border: 2px solid red; */
 }
 header .right_minor_nav {
     float: right;
-
-    border: 2px solid red;
+    transform: translateY(20%);
+    /* border: 2px solid red; */
 }
-
 header .upper_header ul li,
 header .lower_header ul li {
     display: inline-block;
@@ -53,18 +60,13 @@ header .lower_header ul li {
     margin-left: 20px;
     font-weight: 500;
 }
-
 header .upper_header #language {
     border-right: solid 1px black;
     margin-right: 10px;
     padding-right: 10px;
 }
-header .upper_header .btn_orange {
-    background-color: #FE775A;
-    color: white;
-    border-radius:3px;
-}
 header .upper_header a#getfree{
+    display: block;
     padding: 10px 10px;
 }
 header .upper_header #search {
@@ -79,17 +81,14 @@ header .upper_header #btn_login{
 }
 
     /*Lower header  */
-
 header .contain_lower_header {
     background-color: #FFFFFF;
-
-    border: dotted black 3px;
+        /* border: dotted black 3px; */
 }
 header .lower_header{
     height: 60px;
     position: relative;
-
-    border:  solid blue 3px;
+    /* border:  solid blue 3px; */
 }
 header .lower_header nav{
     float:right;
@@ -98,10 +97,41 @@ header .lower_header nav{
 header .lower_header img{
     transform: translateY(50%);
 }
-
 header .upper_header::after,
 header .lower_header::after {
     content: "";
     position: absolute;
     display: block;
+}
+
+/* ? jumbotron AKA hero*/
+.jumbotron {
+    height: 550px;
+    background-color: #FFF4EF;   
+    background-image: url("../img/jumbotron.png"); 
+    background-position: right;
+    background-size: 80%;
+    background-repeat: no-repeat;
+
+        border: 2px dashed red;
+}
+.jumbotron .title_box {
+    width: 40%;
+    margin-left: 10%;
+    line-height: 1.5;
+        border: 2px dashed peru;
+}
+.jumbotron p{
+    line-height: 2;
+}
+.jumbotron .btn_hubspot_free {
+    padding: 20px 40px;
+    border: none;
+    margin: 30px 0;
+
+}
+
+/* ? Divider */
+section .divider {
+    background-color: #AFEBE4;
 }

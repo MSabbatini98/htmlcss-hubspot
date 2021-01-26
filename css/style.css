@@ -1,4 +1,4 @@
-/* TODO : buttons, firstchild nav_sx,  */
+/* TODO : buttons, firstchild nav_sx, box-shadows */
 
 
 /* Global Rules */
@@ -17,6 +17,13 @@ body{
 h1{
     font-size: 250%;
     margin-bottom: 20px;
+}
+h3{
+    font-size: 175%;
+}
+h4{
+    text-transform: uppercase;
+    margin: 10px 0;
 }
 a{
     color: inherit;
@@ -104,7 +111,8 @@ header .lower_header img{
     transform: translateY(50%);
 }
 header .upper_header::after,
-header .lower_header::after {
+header .lower_header::after,
+.long_box {
     content: "";
     position: absolute;
     display: block;
@@ -154,6 +162,10 @@ section.divider {
 main .main_introduction{
     text-align: center;
 }
+main .main_introduction h2{
+    margin-bottom: 30px;
+    text-transform: capitalize;
+}
 main .main_introduction img{
     height:200px ;
     margin-top: 25px;
@@ -161,9 +173,90 @@ main .main_introduction img{
 main .main_introduction p{
     line-height: 1.5;
     margin: 30px 0;
+    width: 80%;
+    margin: auto;
 }
+
     /* main content  */
+        /* long_box */
 main .box{
     background-color: white;
-    box-shadow: 2px 2px black;
+    /* box-shadow: 2px 2px black; */
+}
+main .long_box{
+    width: 100%;
+    position: relative;
+    margin: 30px 0;
+    padding: 20px;
+        border: deeppink 2px dashed;
+}
+main .img_left_box{
+    width: 30%;
+    float: left;
+}
+main .img_left_box img {
+    width: 60%;
+    height: auto;
+    margin: 5% 20% 5% 20%;
+}
+.btn_learnmore{
+    padding: 20px 40px;
+    border: none;
+}
+.btn_center {
+    text-align: center;
+}
+main .text_right_box{
+    margin-top: 1%;
+    width: 70%;
+    float: left;
+} 
+main .text_right_box p{
+    margin-top: 2%;
+    line-height: 1.8;
+} 
+#side_hr{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 30px 0 33px 20px;
+    width: 65%;
+    color: black;
+}
+
+main .long_box ul li{
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.check {
+    color: #FE775A;
+    margin-right: 10px;
+}
+/* 
+  .element {
+    position: relative;
+}
+ 
+replace the content value with the
+corresponding value from the list below
+ 
+.element:before {
+    content: "\f058";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+        adjust as necessary
+    color: orange;
+    font-size: 18px;
+    padding-right: 0.5em;
+    position: absolute;
+    top: 10px;
+    left: 0;
+} */
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
 }

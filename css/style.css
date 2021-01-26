@@ -1,3 +1,6 @@
+/* TODO : buttons, firstchild nav_sx,  */
+
+
 /* Global Rules */
 * {
     margin: 0;
@@ -8,11 +11,12 @@ body{
     background-color: blue;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
+    height: 5000px;
     color:black;
 }
 h1{
     font-size: 250%;
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 a{
     color: inherit;
@@ -24,6 +28,7 @@ a{
 .width {
     width: 80%;
     margin: auto;
+    max-width: 1080px;
 }
 
 /*? header */
@@ -36,6 +41,7 @@ header .contain_upper_header {
 .btn_orange {
     background-color: #FE775A;
     color: white;
+    text-transform: capitalize;
     border-radius:3px;
 }
 header .upper_header {
@@ -105,21 +111,21 @@ header .lower_header::after {
 }
 
 /* ? jumbotron AKA hero*/
-.jumbotron {
+.jumbotron_container{
+    position: relative;
     height: 550px;
-    background-color: #FFF4EF;   
+    background-color: #fff2ee;   
     background-image: url("../img/jumbotron.png"); 
-    background-position: right;
-    background-size: 80%;
     background-repeat: no-repeat;
-
-        border: 2px dashed red;
+    background-position: 100% 42%;
+        /* border: 2px dashed darkkhaki; */
+}
+.jumbotron{
+    /* border: blue dotted 3px;; */
 }
 .jumbotron .title_box {
-    width: 40%;
-    margin-left: 10%;
-    line-height: 1.5;
-        border: 2px dashed peru;
+    width: 45%;
+        /* border: 2px dashed peru; */
 }
 .jumbotron p{
     line-height: 2;
@@ -130,8 +136,34 @@ header .lower_header::after {
     margin: 30px 0;
 
 }
-
-/* ? Divider */
-section .divider {
+    /* Divider */ 
+section.divider {
+    height: 60px;
+    width:100%;
     background-color: #AFEBE4;
+    border-top: black 3px solid;
+    border-bottom: black 3px solid;
+}
+
+/* ? Main */
+    /* introduction */
+.main_container {
+    background-color: #F4F9FD;
+        border: dashed green 5px;
+}
+main .main_introduction{
+    text-align: center;
+}
+main .main_introduction img{
+    height:200px ;
+    margin-top: 25px;
+}
+main .main_introduction p{
+    line-height: 1.5;
+    margin: 30px 0;
+}
+    /* main content  */
+main .box{
+    background-color: white;
+    box-shadow: 2px 2px black;
 }

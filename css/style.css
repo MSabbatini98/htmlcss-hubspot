@@ -255,6 +255,36 @@ corresponding value from the list below
     left: 0;
 } */
 
+    /* box_1 box_2 e box_3 */
+.lower_boxes {
+    position: relative;
+    /* border: solid fuchsia 3px; */
+}
+
+.lower_boxes .box_1,
+.lower_boxes .box_2,
+.lower_boxes .box_3 {
+    width: calc(100%/3);
+    text-align: center;
+    line-height: 1.8;
+    padding: 10px;
+    float: left;
+    /* border: gold 5px dotted; */
+}
+.lower_boxes hr{
+
+}
+.lower_boxes ul li{
+    list-style-type: none;
+    text-decoration: none;
+    text-align: left;
+    margin-left: 10%;
+    line-height: normal;
+}
+
+
+
+
 .clearfix::after {
     content: "";
     display: block;

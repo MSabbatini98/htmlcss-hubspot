@@ -16,7 +16,7 @@ body{
 }
 h1{
     font-size: 250%;
-    margin-bottom: 20px;
+    padding: 40px 0;
 }
 h3{
     font-size: 150%;
@@ -24,6 +24,10 @@ h3{
 h4{
     text-transform: uppercase;
     margin: 20px 0;
+}
+h5{
+    text-transform: lowercase;
+    font-weight: 500;
 }
 a{
     color: inherit;
@@ -294,22 +298,51 @@ corresponding value from the list below
     text-transform: capitalize;
 }
 
+/* ? Community section */
 .community_container {
+    position: relative;
     height: 700px;
     text-align: center;
     color: white;
     background-image: linear-gradient(45deg,#00a4bd,#00bda5);
 }
+.community{
+}
+.community h2{
+    padding-top: 40px;
+}
 .community p {
     margin-top: 20px;
     font-size: 90%;
     line-height: 2;
-
 }
-
-
-
-
+.weird_table{
+    margin-top: 50px;
+}
+.grid_item{
+    padding: 30px;
+    display: inline-block;
+    width: 24%;
+    height: 180px;
+    border: white 1px solid;
+}
+.grid_content{
+    vertical-align: middle;
+}
+.grid_item b{
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 225%;
+    margin: 15px 0;
+}
+.plus{
+    vertical-align: text-bottom;
+    display: inline-block;
+    font-size: 25px;
+}
+#growth_logo {
+    padding:5px;
+}
 
 
 

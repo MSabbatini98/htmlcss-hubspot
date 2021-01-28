@@ -1,5 +1,7 @@
-/* TODO : buttons, firstchild nav_sx, box-shadows */
-
+/* TODO : Done */
+/* ? */
+/* ! */
+/* * */
 
 /* Global Rules */
 * {
@@ -11,7 +13,6 @@ body{
     background-color: blue;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    height: 5000px;
     color:black;
 }
 h1{
@@ -70,21 +71,31 @@ header .right_minor_nav {
     transform: translateY(20%);
     /* border: 2px solid red; */
 }
-header .upper_header ul li,
+header .upper_header  ul li,
 header .lower_header ul li {
     display: inline-block;
-    text-decoration: none;
     margin-left: 20px;
     font-weight: 500;
 }
+header .upper_header ul li,
+header .lower_header ul li {
+    display: inline-block;
+    margin-left: 20px;
+    font-weight: 500;
+}
+header .upper_header ul li:first-child{
+    margin-left: 0px;
+}
+
 header .upper_header #language {
     border-right: solid 1px black;
     margin-right: 10px;
     padding-right: 10px;
 }
-header .upper_header a#getfree{
+header .upper_header button#getfree{
     display: block;
     padding: 10px 10px;
+    border: none;
 }
 header .upper_header #search {
     color:#00A4BD;
@@ -322,6 +333,30 @@ corresponding value from the list below
     height: 180px;
     border: white 1px solid;
 }
+.grid_item.top_right_corner{
+    border-top: none;
+    border-right: none;
+}
+.grid_item.top_left_corner{
+    border-top: none;
+    border-left: none;
+}
+.grid_item.bot_right_corner{
+    border-bottom: none;
+    border-right: none;;
+}
+.grid_item.bot_left_corner{
+    border-bottom: none;
+    border-left: none;;
+}
+.grid_item.upper_corner{
+    border-top: none;
+}
+.grid_item.lower_corner{
+    border-bottom: none;
+}
+
+
 .grid_content{
     vertical-align: middle;
 }

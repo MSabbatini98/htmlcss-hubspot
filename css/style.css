@@ -9,11 +9,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
 body{
     background-color: blue;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    color:black;
+    color:#33475b;
 }
 h1{
     font-size: 250%;
@@ -21,10 +26,6 @@ h1{
 }
 h3{
     font-size: 150%;
-}
-h4{
-    text-transform: uppercase;
-    margin: 20px 0;
 }
 h5{
     text-transform: lowercase;
@@ -41,6 +42,7 @@ a{
     width: 80%;
     margin: auto;
     max-width: 1080px;
+        /* border: 1px solid black; */
 }
 
 /*? header */
@@ -63,21 +65,26 @@ header .upper_header {
 }
 header .upper_header .left_minor_nav{
     float: left;
-    transform: translateY(110%);
-    /* border: 2px solid red; */
+    line-height: 60px;
+    vertical-align: middle;
+        /* border: 2px solid red; */
 }
 header .right_minor_nav {
     float: right;
-    transform: translateY(20%);
-    /* border: 2px solid red; */
+    line-height: 60px;
+    vertical-align: middle;
+        /* border: 2px solid red; */
 }
-header .upper_header  ul li,
-header .lower_header ul li {
-    display: inline-block;
+#vertical_divisor {
+    color: #899397;
     margin-left: 20px;
-    font-weight: 500;
 }
-header .upper_header ul li,
+/* header .left_minor_nav .language::after{
+    display: inline-block;
+    color: #33475b;
+    content: '|';
+} */
+header .upper_header  ul li,
 header .lower_header ul li {
     display: inline-block;
     margin-left: 20px;
@@ -86,16 +93,8 @@ header .lower_header ul li {
 header .upper_header ul li:first-child{
     margin-left: 0px;
 }
-
-header .upper_header #language {
-    border-right: solid 1px black;
-    margin-right: 10px;
-    padding-right: 10px;
-}
-header .upper_header button#getfree{
-    display: block;
+header .upper_header #getfree{
     padding: 10px 10px;
-    border: none;
 }
 header .upper_header #search {
     color:#00A4BD;
@@ -133,7 +132,7 @@ header .lower_header img{
     background-color: #fff2ee;   
     background-image: url("../img/jumbotron.png"); 
     background-repeat: no-repeat;
-    background-position: 100% 42%;
+    background-position: 100% 82%;
         /* border: 2px dashed darkkhaki; */
 }
 .jumbotron .title_box {
@@ -145,17 +144,21 @@ header .lower_header img{
     line-height: 2;
 }
 .btn_hubspot_free {
+    display: inline-block;
     padding: 20px 40px;
     border: none;
     margin: 30px 0;
 }
     /* Divider */ 
-section.divider {
-    height: 60px;
+.jumbotron::after {
+    content: "";
+    height: 54px;
     width:100%;
+    position: absolute;
+    bottom:0;
+    left:0;
     background-color: #AFEBE4;
     border-top: black 3px solid;
-    border-bottom: black 3px solid;
 }
 
 /* ????????????????????????? Main */
@@ -223,6 +226,15 @@ main .text_right_box p{
     margin-top: 2%;
     line-height: 1.8;
 } 
+main h4{
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+h4#lined{
+    text-transform: uppercase;
+    margin: 20px 0;
+    display: inline-block;
+}
 #side_hr{
     display: inline-block;
     vertical-align: middle;
@@ -230,38 +242,14 @@ main .text_right_box p{
     width: 65%;
     color: black;
 }
-
 main .long_box ul li{
     display: inline-block;
     margin-right: 15px;
 }
-
 .check {
     color: #FE775A;
     margin-right: 10px;
 }
-/* 
-  .element {
-    position: relative;
-}
- 
-replace the content value with the
-corresponding value from the list below
- 
-.element:before {
-    content: "\f058";
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: inherit;
-        adjust as necessary
-    color: orange;
-    font-size: 18px;
-    padding-right: 0.5em;
-    position: absolute;
-    top: 10px;
-    left: 0;
-} */
 
     /* box_1 box_2 e box_3 */
 .lower_boxes {
@@ -330,33 +318,20 @@ corresponding value from the list below
     padding: 30px;
     display: inline-block;
     width: 24%;
-    height: 180px;
     border: white 1px solid;
 }
-.grid_item.top_right_corner{
+.grid_item.top_missing_border{
     border-top: none;
-    border-right: none;
 }
-.grid_item.top_left_corner{
-    border-top: none;
+.grid_item.bot_missing_border{
+    border-bottom: none;
+}
+.grid_item.left_missing_border{
     border-left: none;
 }
-.grid_item.bot_right_corner{
-    border-bottom: none;
-    border-right: none;;
+.grid_item.right_missing_border{
+    border-right: none;
 }
-.grid_item.bot_left_corner{
-    border-bottom: none;
-    border-left: none;;
-}
-.grid_item.upper_corner{
-    border-top: none;
-}
-.grid_item.lower_corner{
-    border-bottom: none;
-}
-
-
 .grid_content{
     vertical-align: middle;
 }
@@ -382,10 +357,6 @@ corresponding value from the list below
     background-color: white;
         /* border:solid 4px  tomato; */
 }
-/* .additional_info {
-         border: dashed greenyellow 3px; 
-} 
-*/
 .upper_info{
     height: 250px;
         /* border: solid 3px silver; */
@@ -432,7 +403,7 @@ corresponding value from the list below
 .lower_info .title_box {
     float: left;
     width: 50%;
-    padding: 30px;
+    padding: 30px 0;
         /* border: solid 3px red;; */
 }
 .lower_info .title_box h2{
@@ -459,7 +430,7 @@ footer {
 footer .column_list{
     float: left;
     width: 25%;
-    padding: 3%;
+    padding: 3% 0;
         /* border: solid 3px white;    */
 }
 footer h4{
@@ -473,11 +444,7 @@ footer ul li {
     list-style: none;
     line-height: 2.5;
 }
-.clearfix::after {
-    content: "";
-    display: block;
-    clear: both;
-}
+
 .socials{
     width: 18%;
 }
@@ -506,10 +473,5 @@ footer .footer_box_dx {
 footer .footer_box_sx{
     float: right;
 }
-/* Colori 
-header sopra sopra: #F4F9FD;
-header con logo : white;
-celestino della lente : :#00A4BD;
-Arancione del tema: #FE775A;
-Sfondo Jumbotron :  #fff2ee;
-Divisore : #AFEBE4; */
+
+
